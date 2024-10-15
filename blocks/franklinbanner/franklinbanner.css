@@ -1,0 +1,39 @@
+.franklinbanner .hero-wrapper {
+    max-width: unset;
+    padding: 0;
+  }
+  
+  .franklinbanner {
+    position: relative;
+    padding: 20px 40px;
+    min-height: 300px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+  }
+
+  .franklinbanner > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .franklinbanner > div > div {
+    flex-basis: calc(50% - 40px);
+    /* width: 50%; */
+  }
+
+  .franklinbanner > div > div:first-child > picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (width >= 900px) {
+    .franklinbanner {
+      padding: 40px 32px;
+    }
+  }
