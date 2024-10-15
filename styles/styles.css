@@ -258,4 +258,6 @@ main .section.highlight {
 
 main .section.brandnewsection-container {
     background-color: lightgray;
+    margin: 0;
+    padding: 30px;
 }
