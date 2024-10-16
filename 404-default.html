@@ -36,16 +36,6 @@
       min-height: calc(100vh - var(--nav-height));
       display: flex;
       align-items: center;
-      background-color: powderblue;
-    }
-
-    main.error .section{
-      display: flex;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 90%;
-      margin: 20px auto;
     }
 
     main.error .error-number {
@@ -54,16 +44,6 @@
 
     main.error .error-number text {
       font-family: monospace;
-    } 
-
-    main.error h2,  main.error p a{
-      color: #222 !important;
-      text-transform: uppercase;
-    }
-
-    main.error p a{
-      background-color: #fff !important;
-      border: none !important;
     }
   </style>
   <link rel="stylesheet" href="/styles/lazy-styles.css">
@@ -73,18 +53,13 @@
   <header></header>
   <main class="error">
     <div class="section">
-      <div>
-        <svg viewBox="0 0 48 18" class="error-number">
-          <text x="0" y="15">Oops!</text>
-        </svg>
-        <h2 class="error-message">Sorry! The Page Not Found!</h2>
-        <p class="button-container">
-          <a href="/" class="button secondary error-button-home">Go home</a>
-        </p>
-      </div>
-      <div>
-        <img src="404.png" />
-      </div>
+      <svg viewBox="1 0 38 18" class="error-number">
+        <text x="0" y="17">404</text>
+      </svg>
+      <h2 class="error-message">Page Not Found</h2>
+      <p class="button-container">
+        <a href="/" class="button secondary error-button-home">Go home</a>
+      </p>
     </div>
   </main>
   <footer></footer>
