@@ -37,7 +37,8 @@ export default async function decorate(block) {
           const placeholderLink = div.querySelector('.button');
           console.log(placeholderLink);
           placeholderLink.setAttribute('href', '#');
-          placeholderLink.addEventListener('click', function (e) {
+          placeholderLink.addEventListener('click', placeholderClick)
+          function placeholderClick(e) {
             e.preventDefault();
             // Toggle between showing full content and truncating with ellipsis
             if (secondParagraph.classList.contains('truncated')) {
@@ -48,15 +49,13 @@ export default async function decorate(block) {
               secondParagraph.classList.add('truncated');
               placeholderLink.innerText = clickHereForMore || 'Click here for more'; // Revert to 'Click here for more'
             }
-          });
+          };
         }
       }
     });
     ul.append(li);
   });
-  ul.querySelectorAll('picture > img').forEach((img) =>
-    img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]))
-  );
+  ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }],)));
   block.textContent = '';
   block.append(ul);
 }
