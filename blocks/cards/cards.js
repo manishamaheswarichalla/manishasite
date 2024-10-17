@@ -18,8 +18,7 @@ export default async function decorate(block) {
     [...li.children].forEach((div) => {
       if (div.children.length === 1 && div.querySelector('picture')) {
         div.className = 'cards-card-image';
-      }
-      else {
+      } else {
         div.className = 'cards-card-body';
         const paragraphs = div.querySelectorAll('p');
         if (paragraphs.length > 1) {
@@ -37,7 +36,6 @@ export default async function decorate(block) {
           const placeholderLink = div.querySelector('.button');
           console.log(placeholderLink);
           placeholderLink.setAttribute('href', '#');
-          placeholderLink.addEventListener('click', placeholderClick)
           function placeholderClick(e) {
             e.preventDefault();
             // Toggle between showing full content and truncating with ellipsis
@@ -50,6 +48,7 @@ export default async function decorate(block) {
               placeholderLink.innerText = clickHereForMore || 'Click here for more'; // Revert to 'Click here for more'
             }
           };
+          placeholderLink.addEventListener('click', placeholderClick)
         }
       }
     });
