@@ -1,5 +1,5 @@
 import { fetchPlaceholders,getMetadata } from '../../scripts/aem.js';
-let sheetdata = null;
+// let sheetdata = null;
 let currentPage = 1;
 const itemsPerPage = 20;
 let jsonURL = ""
@@ -42,11 +42,11 @@ async function createTableRow(table, row) {
 // Function to fetch and create table with pagination
 async function createTable(page) {
   const offset = (page - 1) * itemsPerPage; // Calculate offset based on the current page
-  const offsetURL = `${jsonURL}?offset=${offset}&limit=${itemsPerPage}`; //Add offset and limit to the url
+  const offsetURL = `${jsonURL}?offset=${offset}&limit=${itemsPerPage}`; //Add offset and limit to the url 
+  // https://main--manishasite--manishamaheswarichalla.aem.live/countries.json?offset=0&limit=20
 
   const resp = await fetch(offsetURL);
   const jsonresp = await resp.json();
-  console.log(jsonresp)
 
   const table = document.createElement('table');
   createTableHeader(table);
@@ -104,7 +104,7 @@ async function changePage(newPage) {
   if (newPage < 1 || newPage > totalPages) return; // Prevent going out of bounds
 
   currentPage = newPage;
-  currentPage = newPage;
+  // currentPage = newPage;
   const table = document.querySelector(".custom-list table");
   table.innerHTML = ""; // Clear the current table rows
   const parentDiv = document.querySelector(".custom-list");
@@ -123,6 +123,7 @@ async function getTotalRowCount() {
 }
  
 export default async function decorate(block) {
+  console.log(block);
   const listItems = block.querySelector('a[href$=".json"]');
   const parentDiv = document.createElement("div");
   parentDiv.classList.add("custom-list");
