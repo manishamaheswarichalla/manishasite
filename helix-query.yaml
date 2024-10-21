@@ -3,7 +3,7 @@ indices:
     include:
       - /**
     exclude:
-      - /documents/snippets/**
+      - /**/cms/**
     target: /query-index.json
     properties:
       author:
