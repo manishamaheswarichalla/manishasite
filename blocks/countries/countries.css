@@ -79,3 +79,19 @@
   .table.bordered table td {
     border: 1px solid #dadada;
   }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.pagination button:first-child, .pagination button.page-number {
+  margin-right: 5px;
+}
+
+button:disabled {
+    background-color: #939393;
+    color: #ededed;
+}
