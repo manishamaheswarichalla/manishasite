@@ -1,9 +1,9 @@
 indices:
   mysite:
     include:
-      - **
+      - /**
     exclude:
-      - **/cms/**
+      - /**/cms/**
     target: /query-index.json
     properties:
       author:
