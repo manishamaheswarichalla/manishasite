@@ -34,7 +34,5 @@ indices:
         select: head > meta[name="topics"]
         value: |
           attribute(el, 'content')
-      lastModified: 
-        select: none
-        value: |
-          parseTimestamp(headers['last-modified'], 'ddd, DD MMM YYYY hh:mm:ss GMT')
+
+
